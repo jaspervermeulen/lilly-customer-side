@@ -109,6 +109,7 @@ const Text = styled.p`
   margin-left: 10px;
 `;
 
+
 const Experts = () => {
 
   const [naam, setNaam] = useState()
@@ -127,7 +128,8 @@ const Experts = () => {
       naam: naam,
       beroep: beroep,
       nummer: nummer,
-      links: []
+      links: [],
+      codenr: `tel:` + nummer
     }).then(() => setCompletion(true)).catch(error => console.log(error))
 
     setNaam("");

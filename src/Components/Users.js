@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import users from "../assets/users.svg"
 import mail from "../assets/mail.svg"
 import trash from "../assets/trash.svg"
+import phone from "../assets/HomeComponent/phone.svg"
 
 const CardStyles = styled.div`
   margin: 15px 20px 0 0;
@@ -22,6 +23,12 @@ const Flex = styled.div`
 
 const Text = styled.p`
   margin-left: 10px;
+`;
+
+const TextLink = styled.a`
+margin-left: 10px;
+text-decoration: none;
+color: black;
 `;
 
 const TitleStyles = styled.h1`
@@ -174,7 +181,11 @@ const Users = () => {
               </Flex>
               <Flex>
                 <img src={mail} alt="Mail" />
-                <Text>{user.email}</Text>
+                <TextLink href={user.emailCode}>{user.email}</TextLink>
+              </Flex>
+              <Flex>
+                <img src={phone} alt="Gsm" />
+                <TextLink href={user.numberCode}>{user.number}</TextLink>
               </Flex>
               <Table>
                 <TableItem>

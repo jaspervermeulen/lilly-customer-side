@@ -5,7 +5,7 @@ import firebase from "../Auth/base";
 import users from "../assets/users.svg"
 import mail from "../assets/mail.svg"
 import soort from "../assets/soort.svg"
-
+import phone from "../assets/HomeComponent/phone.svg"
 
 const CardStyles = styled.div`
   margin: 15px 20px 0 0;
@@ -23,6 +23,13 @@ const Flex = styled.div`
 const Text = styled.p`
   margin-left: 10px;
 `;
+
+const TextLink = styled.a`
+margin-left: 10px;
+text-decoration: none;
+color: black;
+`;
+
 
 const TitleStyles = styled.h1`
   font-size: 18px;
@@ -115,7 +122,11 @@ const AllUsers = () => {
               </Flex>
               <Flex>
                 <img src={mail} alt="Mail icoon" />
-                <Text>{user.email}</Text>
+                <TextLink href={user.emailCode}>{user.email}</TextLink>
+              </Flex>
+              <Flex>
+                <img src={phone} alt="Gsm icoon" />
+                <TextLink href={user.numberCode}>{user.number}</TextLink>
               </Flex>
               <Flex>
                 <img src={soort} alt="Soort gebruiker" />

@@ -6,7 +6,7 @@ import users from "../assets/users.svg"
 import mail from "../assets/mail.svg"
 import trash from "../assets/trash.svg"
 import add from "../assets/add.svg"
-
+import phone from "../assets/HomeComponent/phone.svg"
 
 const CardStyles = styled.div`
 margin: 15px 20px 0 0;
@@ -35,6 +35,11 @@ const FlexListItem = styled.li`
 
 const Text = styled.p`
   margin-left: 10px;
+`;
+const TextLink = styled.a`
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
 `;
 
 const Select = styled.select`
@@ -220,7 +225,11 @@ const Volunteers = () => {
             </Flex>
             <Flex>
               <img src={mail} alt="Email" />
-              <Text>{user.email}</Text>
+              <TextLink href={user.emailCode}>{user.email}</TextLink>
+              </Flex>
+              <Flex>
+              <img src={phone} alt="Email" />
+              <TextLink href={user.numberCode}>{user.number}</TextLink>
             </Flex>
 
               
